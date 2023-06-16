@@ -49,8 +49,7 @@ method    post
 Router.post("/signup", async (req, res) => {
   try {
     await ValidateSignup(req.body.credentials);
-    const { email } = req.body.credentials
-
+    const { email } = req.body.credentials;
     const user = await UserModel.findOne({ email })
     if (!user) {
       let { city } = req.body.credentials;

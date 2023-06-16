@@ -8,9 +8,9 @@ export const ValidateSignup = (userData) => {
     password: joi.string(),
     address: joi.string(),
     city: joi.string(),
+    status: joi.string(),
   });
-  console.log(userData);
-
+  // console.log(userData);
 return Schema.validateAsync(userData);
 
 };
